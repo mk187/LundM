@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+.login-form-container
+{
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
