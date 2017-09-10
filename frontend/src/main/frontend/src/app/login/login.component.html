@@ -11,12 +11,14 @@
       <h2 class="mb-4">Anmelden</h2>
       <div class="form-group">
         <label for="userEmail">E-Mail-Adresse</label>
-        <input type="email" class="form-control" id="userEmail" placeholder="Bitte E-Mail-Adresse eintragen">
+        <input [(ngModel)]="email" type="email" class="form-control" id="userEmail"
+               placeholder="Bitte E-Mail-Adresse eintragen">
       </div>
 
       <div class="form-group">
         <label for="userEmail">Passwort</label>
-        <input type="password" class="form-control" id="userPassword" placeholder="Bitte Passwort eintragen">
+        <input [(ngModel)]="password" type="password" class="form-control" id="userPassword"
+               placeholder="Bitte Passwort eintragen">
       </div>
 
       <button type="submit" class="btn btn-primary">Anmelden</button>
@@ -25,7 +27,7 @@
     <div class="card mt-5 text-center">
       <div class="card-body">
         <h5 class="mb-4">Sie haben noch keinen Account?</h5>
-        <button type="submit" class="btn btn-primary">Jetzt registrieren</button>
+        <button type="button" class="btn btn-primary">Jetzt registrieren</button>
       </div>
     </div>
   </div>

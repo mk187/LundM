@@ -1,14 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import {LoginComponent} from "./components/login.component";
+import { LoginComponent } from "./login/login.component";
+import { DashboardComponent } from "./dashboard/dashboard.component";
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: 'dashboard', component: DashboardComponent },
   { path: '',
-    redirectTo: '/login',
+    redirectTo: '/dashboard',
     pathMatch: 'full'
   }
 ];
@@ -16,13 +19,15 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     RouterModule.forRoot(
       appRoutes
     ),
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
